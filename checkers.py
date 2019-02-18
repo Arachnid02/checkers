@@ -32,7 +32,7 @@ window.setCoords(0, 0, 900, 900)
 
 #While loop to keep track of how many sets of red and black square are drawn.
 #Will keep running until 32 sets of red and black squares are drawn
-while rowCount < 32:
+while rowCount < 64:
     #Creates a square using the width and height of the square multiplied by
     #the the variable x1Count, x2Count, y1Count, and y2Count
     blackChecker = Rectangle(Point(checkerX * x1Count, checkerY * y1Count),
@@ -52,25 +52,6 @@ while rowCount < 32:
     x2Count += 1
     colorTrack += 1
 
-    #Creates a square using the width and height of the square multiplied by
-    #the the variable x1Count, x2Count, y1Count, and y2Count
-    redChecker = Rectangle(Point(checkerX * x1Count, checkerY * y1Count),
-                           Point(checkerX * x2Count, checkerY * y2Count))
-    #Sets the color of the square to be red if the value of colorTrack is
-    #odd, and black if the value of colorTrack is even
-    if colorTrack % 2 == 1:
-        redChecker.setFill(red)
-    else:
-        redChecker.setFill(black)
-    #Draws the square on the window
-    redChecker.draw(window)
-
-    #Increment each of the three variables by 1, so that the program can keep
-    #track of the correct places to place the squares and the color to color it
-    x1Count += 1
-    x2Count += 1
-    colorTrack += 1
-
     #Increment each of the two variables by 1, so that the loop will create a
     #row of squares on the window, and keep track of the amount of square that
     #are already on the window
@@ -80,7 +61,7 @@ while rowCount < 32:
     #If a row is drawn, so every 4 sets of 2 squares since there are 8 squares
     #per row, then reset the variables so that they will create a new row, and
     #increment colorTrack by 1 so that the colors will alternate properly
-    if columnCount == 4:
+    if columnCount == 8:
         columnCount = int(0)
         colorTrack += 1
         x1Count = int(1)
