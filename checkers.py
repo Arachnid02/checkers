@@ -31,7 +31,7 @@ window = GraphWin("Frankie Boi's Checkerboard", winX, winY)
 window.setCoords(0, 0, 900, 900)
 
 #While loop to keep track of how many sets of red and black square are drawn.
-#Will keep running until 32 sets of red and black squares are drawn
+#Will keep running until 64 total squares are drawn
 while rowCount < 64:
     #Creates a square using the width and height of the square multiplied by
     #the the variable x1Count, x2Count, y1Count, and y2Count
@@ -58,9 +58,9 @@ while rowCount < 64:
     rowCount += 1
     columnCount += 1
 
-    #If a row is drawn, so every 4 sets of 2 squares since there are 8 squares
-    #per row, then reset the variables so that they will create a new row, and
-    #increment colorTrack by 1 so that the colors will alternate properly
+    #If a row is drawn, so every so every 8 squares, then reset the variables
+    #so that they will create a new row, and increment colorTrack by 1 so that
+    #the colors will alternate properly
     if columnCount == 8:
         columnCount = int(0)
         colorTrack += 1
