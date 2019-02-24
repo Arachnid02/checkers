@@ -28,7 +28,7 @@ colorTrack = int(0)
 window = GraphWin("Frankie Boi's Checkerboard", winX, winY)
 #Sets the lower left side of the window to be 0,0 and the upper right side
 #to be 900,900
-window.setCoords(0, 0, 900, 900)
+window.setCoords(0, 0, winX, winY)
 
 #While loop to keep track of how many sets of red and black square are drawn.
 #Will keep running until 64 total squares are drawn
